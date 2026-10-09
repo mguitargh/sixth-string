@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security · Sixth String</title><meta name="description" content="Sixth String guitar-practice app: security.">
+<style>
+:root{--bg:#fbfaf8;--fg:#1b1a19;--muted:#5c5852;--line:#e4e0da;--accent:#b4231a;--code:#f0ede8}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ecebe8;--muted:#a8a39b;--line:#2c2b29;--accent:#ff6b5e;--code:#232220}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+header.site{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:2rem}
+header.site .brand{font-weight:700;letter-spacing:-.01em;color:var(--fg);text-decoration:none;margin-right:auto}
+header.site nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+header.site nav a[aria-current=page]{color:var(--accent);font-weight:600}
+nav{display:flex;flex-wrap:wrap;gap:1rem}
+h1{font-size:2rem;line-height:1.15;letter-spacing:-.02em;margin:.2rem 0 1rem;text-wrap:balance}
+h2{font-size:1.25rem;margin:2.2rem 0 .6rem;text-wrap:balance}h3{font-size:1.05rem;margin:1.6rem 0 .4rem}
+p,li{color:var(--fg)}ul{padding-left:1.2rem}li{margin:.35rem 0}
+a{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font:.9em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code);padding:.1em .3em;border-radius:3px}
+.table{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style></head>
+<body><div class="wrap"><header class="site"><a class="brand" href="../">Sixth String</a><nav aria-label="Pages"><a href="../privacy/">Privacy policy</a><a href="../terms/">Terms of service</a><a href="../support/">Support</a><a href="../security/" aria-current=page>Security</a></nav></header>
+<main>
+<h1>Sixth String Security Policy</h1>
+<h2>To complete before publishing</h2>
+<h2>Reporting a vulnerability</h2>
+<p>Send reports to maciverguitar@gmail.com. Please include a description, affected platform and version, steps to reproduce, and impact. Do not include other people's personal data beyond what is needed to demonstrate the issue.</p>
+<h2>Scope</h2>
+<p>In scope:</p>
+<ul><li>The Sixth String apps for Windows, macOS and iOS.</li><li>The Companion Sync backend as used by the apps (the Supabase project and its row-level security and device-authentication logic).</li></ul>
+<p>Out of scope:</p>
+<ul><li>Songsterr and its website (report to Songsterr), Apple, Microsoft and Supabase platform issues (report to the vendor).</li><li>Social engineering, physical attacks, denial of service and volumetric testing, automated scanning that degrades the shared service, and issues needing a compromised or rooted device.</li><li>Findings that only affect your own unlocked device and your own data.</li></ul>
+<h2>Safe harbour</h2>
+<p>If you act in good faith, follow this policy, avoid privacy violations, data destruction and service disruption, only access data you need to demonstrate the issue (preferably your own), and give us reasonable time to fix it before disclosure, we will not pursue legal action against you for your research and will treat it as authorised. This is a statement of intent by an individual developer; it cannot bind third parties such as Supabase, whose terms also apply to testing its infrastructure.</p>
+<h2>What to expect</h2>
+<p>This is a small, individually run project. Targets, not guarantees:</p>
+<ul><li>Acknowledgement: within 3 working days.</li><li>Initial assessment: within 10 working days.</li><li>Fix or mitigation plan for confirmed high-severity issues: within 30 days; others in a reasonable time.</li><li>Coordinated disclosure: we ask for up to 90 days before public disclosure, and will credit you if you wish. There is no bug bounty.</li></ul>
+<h2>Existing safeguards (for context, not a guarantee)</h2>
+<p>HTTPS only; per-device secrets with row-level security; only the publishable key shipped; no delete via the API; secret scanning (gitleaks) and Dependabot enabled on the repository.</p>
+</main>
+<footer>Sixth String is published by Alasdair Maciver, Scotland, United Kingdom. Contact: maciverguitar@gmail.com</footer></div></body></html>

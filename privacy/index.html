@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy policy · Sixth String</title><meta name="description" content="Sixth String guitar-practice app: privacy policy.">
+<style>
+:root{--bg:#fbfaf8;--fg:#1b1a19;--muted:#5c5852;--line:#e4e0da;--accent:#b4231a;--code:#f0ede8}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ecebe8;--muted:#a8a39b;--line:#2c2b29;--accent:#ff6b5e;--code:#232220}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:46rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+header.site{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:2rem}
+header.site .brand{font-weight:700;letter-spacing:-.01em;color:var(--fg);text-decoration:none;margin-right:auto}
+header.site nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+header.site nav a[aria-current=page]{color:var(--accent);font-weight:600}
+nav{display:flex;flex-wrap:wrap;gap:1rem}
+h1{font-size:2rem;line-height:1.15;letter-spacing:-.02em;margin:.2rem 0 1rem;text-wrap:balance}
+h2{font-size:1.25rem;margin:2.2rem 0 .6rem;text-wrap:balance}h3{font-size:1.05rem;margin:1.6rem 0 .4rem}
+p,li{color:var(--fg)}ul{padding-left:1.2rem}li{margin:.35rem 0}
+a{color:var(--accent)}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font:.9em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code);padding:.1em .3em;border-radius:3px}
+.table{overflow-x:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style></head>
+<body><div class="wrap"><header class="site"><a class="brand" href="../">Sixth String</a><nav aria-label="Pages"><a href="../privacy/" aria-current=page>Privacy policy</a><a href="../terms/">Terms of service</a><a href="../support/">Support</a><a href="../security/">Security</a></nav></header>
+<main>
+<h1>Sixth String Privacy Policy</h1>
+<p><strong>Effective date:</strong> 9 October 2026</p>
+<h2>1. Who we are</h2>
+<p>Sixth String ("the app", formerly Aura Guitar Master Trainer) is a guitar-practice trainer for Windows, macOS and iOS. The data controller is Alasdair Maciver (an individual, sole trader), based in Scotland, United Kingdom. Contact: maciverguitar@gmail.com.</p>
+<p>The app has no accounts, passwords, payments, subscriptions, ads, analytics SDKs, crash-reporting SDKs or tracking pixels, and the app itself sets no cookies.</p>
+<h2>2. The short version</h2>
+<ul><li>Most of what the app handles (microphone audio, camera frames, hand landmarks, practice data, AI Coach prompts) stays on your device and is never sent to us.</li><li>If you choose to pair two of your own devices, a limited set of practice data is stored with our service provider, Supabase, in Ireland.</li><li>Song look-ups and the embedded song player go to Songsterr, an independent third party.</li><li>We do not sell or share your personal information, and we do not track you.</li></ul>
+<h2>3. What we process and why</h2>
+<div class="table"><table><thead><tr><th>Purpose</th><th>Data</th><th>Where</th><th>Lawful basis (UK/EU GDPR)</th></tr></thead><tbody><tr><td>Live pitch, chord and timing detection</td><td>Microphone audio</td><td>On device only</td><td>Consent (OS permission prompt); also needed to provide the feature you ask for</td></tr><tr><td>Fretboard Vision, Tab Maker, pairing QR scan</td><td>Camera frames, hand-pose landmarks</td><td>On device only</td><td>Consent (OS permission prompt)</td></tr><tr><td>Practice tracking and song library</td><td>Attempts, practice seconds, song titles, BPM history, play counts, settings, local backups</td><td>On device only (unless you use Companion Sync)</td><td>Contract (providing the app you asked for)</td></tr><tr><td>Local diagnostics</td><td>Log file <code>aura-log.txt</code> (app events, sync status, device and pairing ids; no audio or camera content)</td><td>On device only</td><td>Legitimate interests (keeping the app working)</td></tr><tr><td>AI Coach (Windows)</td><td>Practice stats in prompts to a local model you supply</td><td>On your PC only</td><td>Contract</td></tr><tr><td>Companion Sync (optional)</td><td>See section 4</td><td>Supabase, EU region</td><td>Contract (you opted in by pairing); legitimate interests in keeping the sync service secure and auditable</td></tr><tr><td>Song look-up and web player</td><td>Song title/artist queries; your connection to Songsterr</td><td>Songsterr</td><td>Contract; Songsterr acts as an independent controller for its own site</td></tr></tbody></table></div>
+<p>Where we rely on consent (microphone, camera) you give it through the operating system prompt and can withdraw it at any time in your device's Settings. Withdrawing may stop the related features working.</p>
+<h2>4. Companion Sync data</h2>
+<p>Sync is optional and only starts after you pair two of your own devices. It stores with Supabase:</p>
+<ul><li>device id (random UUID), device display name (the name of your computer or phone, which may contain your first name), device type, 6-character pairing code, a SHA-256 hash of a per-device random secret, last-seen time;</li><li>pairings between two device ids;</li><li>outbox rows of drill attempts, practice seconds per module per day, and song BPM/played events;</li><li>a "desktop snapshot" (practice summary and song list) per pairing.</li></ul>
+<p>Each device authenticates with its own secret. Row-level security limits every read and write to that device's own pairings. The API does not permit deletion. The device secret itself is kept in the macOS/iOS Keychain or Windows DPAPI and only its hash is stored by the service.</p>
+<h2>5. Hand landmarks and other biometric-adjacent data</h2>
+<p>Tab Maker can save a "take" folder on your device containing recorded audio (WAV), camera frames (JPEG), detected notes (CSV), the generated tab, and <code>hands.csv</code>, which holds per-frame landmark positions of your fretting hand from Apple Vision hand-pose detection. This is hand geometry and could be treated as biometric data under some laws (for example Illinois, Texas and Washington) if it were linked to an identifiable person.</p>
+<ul><li>It stays on your device. It is never sent to the developer, Supabase, Songsterr or anyone else by the app.</li><li>We do not use it to identify you, and we do not perform face or identity recognition.</li><li>Retention: Tab Maker keeps only your 10 most recent unkept takes and deletes older ones automatically. Takes you choose to keep stay in the app's own data folder until you delete them or uninstall the app.</li><li>Be aware that backups made by your own operating system (for example iCloud or Time Machine) may include these folders under your own backup settings.</li></ul>
+<h2>6. Third parties and processors</h2>
+<div class="table"><table><thead><tr><th>Recipient</th><th>Role</th><th>What</th><th>Location</th></tr></thead><tbody><tr><td>Supabase Inc.</td><td>Processor</td><td>Companion Sync data in section 4 (free plan, project region eu-west-1)</td><td>Ireland (data); Supabase Inc. is a US company</td></tr><tr><td>Songsterr (Songsterr.com)</td><td>Independent third party</td><td>Song title/artist look-ups; its own website in the embedded player (its cookies and privacy policy apply there)</td><td>See Songsterr's policy</td></tr><tr><td>Apple / Microsoft</td><td>Independent controllers as OS and distribution vendors</td><td>App distribution; OS crash reports only if you opt in via the OS</td><td>Per their policies</td></tr></tbody></table></div>
+<p>The in-app web player is restricted to Songsterr only.</p>
+<h2>7. International transfers</h2>
+<p>Sync data is stored in the EU (Ireland). Supabase Inc. is a US company, so access from the US may be a restricted transfer. We rely on Supabase's Data Processing Addendum (version 1, 1 August 2026), which applies automatically under Supabase's terms and incorporates the EU Standard Contractual Clauses (Modules 2 and 3) and the UK International Data Transfer Addendum. Supabase must tell us of a security incident without undue delay and, where feasible, within 48 hours, and gives 30 days' notice of new sub-processors. Songsterr and the OS vendors handle data under their own policies.</p>
+<h2>8. Retention</h2>
+<ul><li>On-device data: until you delete it or uninstall the app.</li><li>Sync rows: kept indefinitely today because they serve as the audit trail of practice time; there is no automated purge yet. You can ask us to delete them (section 11).</li><li>Log files: stay on your device; they are not sent to us.</li></ul>
+<h2>9. Security</h2>
+<p>Connections to Supabase use HTTPS (encrypted in transit). Only the Supabase publishable key is shipped in the apps, never a service-role key. Device identity is stored in the Keychain (macOS/iOS) or DPAPI (Windows). Access is limited by per-device authentication and row-level security. No system is perfectly secure and we do not claim otherwise. Report vulnerabilities as described in our security policy.</p>
+<h2>10. US state privacy information</h2>
+<p>This section applies to residents of US states with privacy laws (for example California under CCPA/CPRA).</p>
+<ul><li>We collect: identifiers (random device id, device name) and usage information (practice events) only if you use Companion Sync.</li><li>We do not sell personal information and do not share it for cross-context behavioural advertising. We have no knowledge of selling or sharing data of anyone under 16.</li><li>We do not use or disclose sensitive personal information for purposes beyond providing the app. Hand-landmark data stays on your device and is not collected by us.</li><li>Rights: know/access, delete, correct, portability, and non-discrimination for exercising rights. Use the contact in section 11. An authorised agent may act for you with proof of authority. You may appeal a refusal by replying to our decision.</li><li>Global Privacy Control: the app does not track you, set advertising cookies or run third-party advertising tags, so there is nothing for a GPC signal to opt you out of. The embedded Songsterr site is operated by Songsterr and is outside our control.</li><li>Residents of Illinois, Texas, Washington and other states with biometric laws: see section 5. We do not collect or retain your hand-landmark data.</li></ul>
+<h2>11. Your rights and how to exercise them</h2>
+<p>Under UK and EU GDPR you can ask to access, correct, delete, restrict or object to our processing of your data, receive a portable copy, and withdraw consent. Email maciverguitar@gmail.com and tell us your device display name and, if possible, your pairing code or device id so we can find your rows. We may need to verify that you control the device. We respond within one month (extendable by two months for complex requests, and we will tell you if so). We do not charge a fee for ordinary requests.</p>
+<p>You can complain to the UK Information Commissioner's Office (<a href="https://ico.org.uk">ico.org.uk</a>) or to your local EU supervisory authority. We would appreciate the chance to resolve your concern first.</p>
+<h2>12. Children</h2>
+<p>Sixth String is not directed to children under 13 (or under the age of digital consent in your country, which is 13 in the UK) and has no age gate today. We do not knowingly collect personal information from children under 13. If you believe a child has used Companion Sync, contact maciverguitar@gmail.com and we will delete the data.</p>
+<h2>13. Changes</h2>
+<p>We will post changes here and update the effective date. For material changes we will make reasonable efforts to tell you inside the app before they apply.</p>
+<h2>14. Contact</h2>
+<p>Alasdair Maciver (an individual, sole trader), Scotland, United Kingdom. Email: maciverguitar@gmail.com.</p>
+</main>
+<footer>Sixth String is published by Alasdair Maciver, Scotland, United Kingdom. Contact: maciverguitar@gmail.com</footer></div></body></html>
