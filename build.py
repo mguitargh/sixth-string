@@ -71,7 +71,7 @@ code{font:.9em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--code
 th,td{border-bottom:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}th{color:var(--muted);font-weight:600}
 footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 """
-PAGES = [("", "Sixth String", None), ("privacy", "Privacy policy", "PRIVACY-POLICY.md"), ("terms", "Terms of service", "TERMS-OF-SERVICE.md"),
+PAGES = [("", "Sixth String", None), ("privacy", "Privacy policy", "PRIVACY-POLICY-PUBLIC-APP.md"), ("terms", "Terms of use", "TERMS-OF-USE-PUBLIC-APP.md"),
          ("support", "Support", "support.md"), ("security", "Security", "SECURITY.md")]
 
 def shell(slug, title, body):
