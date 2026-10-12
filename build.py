@@ -72,7 +72,7 @@ th,td{border-bottom:1px solid var(--line);padding:.55rem .6rem;text-align:left;v
 footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 """
 PAGES = [("", "Sixth String", None), ("privacy", "Privacy policy", "PRIVACY-POLICY-PUBLIC-APP.md"), ("terms", "Terms of use", "TERMS-OF-USE-PUBLIC-APP.md"),
-         ("support", "Support", "support.md"), ("security", "Security", "SECURITY.md")]
+         ("support", "Support", "support.md"), ("security", "Security", "SECURITY-PUBLIC-APP.md")]
 
 def shell(slug, title, body):
     up = "../" if slug else ""
@@ -89,8 +89,8 @@ def shell(slug, title, body):
 """
 
 def main():
-    index_md = ("# Sixth String\n\nA guitar-practice trainer for Windows, macOS and iPhone that listens to your playing and grades drills in real time.\n\n"
-                "- [Support](support/)\n- [Privacy policy](privacy/)\n- [Terms of service](terms/)\n- [Security](security/)\n")
+    index_md = ("# Sixth String\n\nA guitar-practice trainer for iPhone that listens to your playing and grades drills in real time.\n\n"
+                "- [Support](support/)\n- [Privacy policy](privacy/)\n- [Terms of use](terms/)\n- [Security](security/)\n")
     for slug, title, src in PAGES:
         if src is None: md = index_md
         elif src == "support.md": md = (ROOT / src).read_text()
