@@ -15,7 +15,7 @@ Email **maciverguitar@gmail.com** with your iPhone model, the app version if you
 
 ## Sixth String Pro
 
-- **Free trial and plans.** The yearly plan includes a 7-day free trial for new subscribers. You can also pay monthly, or once for lifetime access.
+- **Free trial and plans.** Pro Yearly is £14.99 a year with a 7-day free trial for new subscribers; Pro Monthly is £1.99 a month; Pro Lifetime is £29.99 once. Those are UK prices: the App Store shows yours before you buy.
 - **Cancel.** iPhone Settings → your name → Subscriptions → Sixth String. Cancel at least 24 hours before the trial or period ends to avoid the next charge; Pro stays on until then.
 - **Restore on a new iPhone.** Open any Pro drill and tap Restore Purchases, signed in with the same Apple ID.
 - **Refunds.** Apple handles payments and refunds: reportaproblem.apple.com.
