@@ -4,7 +4,7 @@ Sixth String is a guitar-practice app for iPhone. It listens to your playing thr
 
 ## Contact
 
-Email **maciverguitar@gmail.com** with your iPhone model, the app version if you know it, and what happened. We aim to reply within 5 working days.
+Email **ajfmapps@gmail.com** with your iPhone model, the app version if you know it, and what happened. We aim to reply within 5 working days.
 
 ## Common questions
 
@@ -26,4 +26,4 @@ We don't collect any data, so there's nothing for us to send you or delete. Your
 
 ## Security
 
-Found a security problem? Email maciverguitar@gmail.com with "Security" in the subject line, and please don't share details publicly until it's fixed. See the [security policy](../security/).
+Found a security problem? Email ajfmapps@gmail.com with "Security" in the subject line, and please don't share details publicly until it's fixed. See the [security policy](../security/).

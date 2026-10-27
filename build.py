@@ -85,7 +85,7 @@ def shell(slug, title, body):
 <main>
 {body}
 </main>
-<footer>Sixth String is published by Alasdair Maciver, Scotland, United Kingdom. Contact: maciverguitar@gmail.com</footer></div></body></html>
+<footer>Sixth String is published by Alasdair Maciver, Scotland, United Kingdom. Contact: ajfmapps@gmail.com</footer></div></body></html>
 """
 
 def main():
